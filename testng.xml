@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    data-provider-thread-count controls how many scenarios run at once.
+    Combined with TestRunner's @DataProvider(parallel = true), this is
+    what actually gives parallel execution across the three scenarios
+    (Honda bikes / Chennai used cars / Google invalid login), each with
+    its own WebDriver instance via DriverFactory's ThreadLocal.
+-->
+<suite name="ZigWheels Case Study 2 Suite" data-provider-thread-count="3" verbose="1">
+    <test name="Cucumber BDD Scenarios">
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>

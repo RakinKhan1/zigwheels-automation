@@ -1,0 +1,1398 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sept 28, 2026 02:25:30 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sept 28, 2026 02:25:30 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sept 28, 2026 02:28:09 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>4</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>6</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>50</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Invalid Google login from zigwheels":80.274,"Upcoming Honda bikes under budget":133.483,"Popular used car models in Chennai":70.206,"Frame handling on the zigwheels home page":22.767
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@negative-test</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@smoke</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@frames</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@accessibility</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@performance</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@googlelogin</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@windows</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@usedcars</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@bikes</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Framework</td>
+<td>Selenium + Cucumber + TestNG</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>ZigWheels Automation - Case Study 2</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>Chrome</td>
+</tr>
+<tr>
+<td>Site</td>
+<td>https://www.zigwheels.com</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 6,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 50,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@negative-test</a><a class="dropdown-item" href="#">@smoke</a><a class="dropdown-item" href="#">@frames</a><a class="dropdown-item" href="#">@accessibility</a><a class="dropdown-item" href="#">@performance</a><a class="dropdown-item" href="#">@googlelogin</a><a class="dropdown-item" href="#">@windows</a><a class="dropdown-item" href="#">@usedcars</a><a class="dropdown-item" href="#">@bikes</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Invalid Google login from zigwheels</p>
+            <p class="text-sm">
+              <span>14:25:32</span> / <span>00:01:20:274</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Invalid Google login from zigwheels</h5>
+<span class='badge badge-success'>09.28.2026 14:25:32</span>
+<span class='badge badge-danger'>09.28.2026 14:26:52</span>
+<span class='badge badge-default'>00:01:20:274</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a QA engineer validating negative paths
+I want to log in to zigwheels with Google using invalid account details
+So that I can confirm the correct warning/error message is shown</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Log in to zigwheels with Google using invalid details and capture the error</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_am_on_the_zigwheels_home_page()">
+                <span>Given I am on the zigwheels home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleLoginSteps.i_open_the_zigwheels_login_box()">
+                <span>When I open the zigwheels login box</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleLoginSteps.i_choose_to_continue_with_google()">
+                <span>And I choose to continue with Google</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleLoginSteps.a_google_sign_in_popup_window_should_open()">
+                <span>Then a Google sign-in popup window should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleLoginSteps.i_attempt_to_log_in_with_invalid_details(java.lang.String,java.lang.String)">
+                <span>When I attempt to log in with an invalid email "this.account.does.not.exist.qea.hackathon@gmail.com" and password "WrongPassword123!"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleLoginSteps.google_should_show_an_error_message()">
+                <span>Then Google should show an error message</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleLoginSteps.i_capture_and_display_the_warning_message_text()">
+                <span>And I capture and display the warning message text</span>
+      <div>Captured Google error message: "Couldn’t find this account"
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleLoginSteps.i_close_the_google_popup_and_switch_back_to_zigwheels()">
+                <span>When I close the Google popup and switch back to zigwheels</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.GoogleLoginSteps.i_should_be_back_on_the_zigwheels_window()">
+                <span>Then I should be back on the zigwheels window</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Final state
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/embedded1.png' src="screenshots/embedded1.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Upcoming Honda bikes under budget</p>
+            <p class="text-sm">
+              <span>14:25:32</span> / <span>00:02:13:483</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Upcoming Honda bikes under budget</h5>
+<span class='badge badge-success'>09.28.2026 14:25:32</span>
+<span class='badge badge-danger'>09.28.2026 14:27:46</span>
+<span class='badge badge-default'>00:02:13:483</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a prospective Honda bike buyer in India
+I want to see upcoming Honda bikes priced under 4 Lakh
+So that I know what's launching soon within my budget</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Basic accessibility checks on the upcoming bikes page</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_am_on_the_zigwheels_home_page()">
+                <span>Given I am on the zigwheels home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.BikesSteps.i_navigate_to_the_upcoming_bikes_page()">
+                <span>When I navigate to the upcoming bikes page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.AccessibilitySteps.i_scan_the_page_and_report_accessibility_violations()">
+                <span>Then I scan the page with axe-core and report any critical or serious accessibility violations</span>
+      <div>axe-core scan of https://www.zigwheels.com/upcoming-bikes
+Violation types found: 4 (critical/serious: 3)
+  [serious] aria-command-name - 1 element(s)
+  [serious] color-contrast - 56 element(s)
+  [serious] link-name - 5 element(s)
+  [moderate] region - 3 element(s)
+
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.AccessibilitySteps.a_keyboard_only_user_can_tab_through_the_page()">
+                <span>And a keyboard-only user can Tab through the first interactive elements on the page</span>
+      <div>Keyboard Tab journey (15 presses):
+  Tab 1: [a] (no accessible name)
+  Tab 2: [input] "Creta, Community, On Road Price, Ola S1, TVS Bikes"  [no visible focus indicator]
+  Tab 3: [span] role=button (no accessible name)
+  Tab 4: [summary] "... Read More"
+  Tab 5: [a] "Bajaj Adventure"
+  Tab 6: [a] "BMW F 450 R"
+  Tab 7: [a] "Triumph Bonneville 350"
+  Tab 8: [a] "Norton Manx"
+  Tab 9: [a] "Norton Atlas"
+  Tab 10: [a] "2026 Bajaj Pulsar"
+  Tab 11: [a] "Norton Manx R"
+  Tab 12: [a] "Royal Enfield Himalayan 750"
+  Tab 13: [a] "Yamaha RX 100"
+  Tab 14: [a] "Royal Enfield Classic 350 Flex Fuel"
+  Tab 15: [a] "Yamaha MT-09"
+Different visible controls reached: 15
+Findings: 0 non-interactive stop(s), 0 hidden stop(s), 1 stop(s) with no visible focus indicator, 2 control(s) with no accessible name (a screen reader has nothing to announce), 0 press(es) where focus did not move
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Final state
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/embedded2.png' src="screenshots/embedded2.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Display upcoming Honda bikes priced under 4 Lakh</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_am_on_the_zigwheels_home_page()">
+                <span>Given I am on the zigwheels home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_extract_the_top_navigation_menu_items_into_a_list()">
+                <span>When I extract the top navigation menu items into a list</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.the_menu_items_list_should_not_be_empty()">
+                <span>And the menu items list should not be empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_display_the_menu_items_list()">
+                <span>And I display the menu items list</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.BikesSteps.i_navigate_to_the_upcoming_bikes_page()">
+                <span>And I navigate to the upcoming bikes page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.PerformanceSteps.i_capture_the_page_load_performance_metrics(java.lang.String)">
+                <span>And I capture the page load performance metrics for the "Upcoming bikes" page</span>
+      <div>Page load performance: Upcoming bikes (https://www.zigwheels.com/upcoming-bikes)
+  Server response time: 642 ms  (within 1000 ms budget)
+  Page usable (DOM ready): 2240 ms
+  Fully loaded: 34224 ms
+  Saved to target/performance/page-load-timings.csv
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.BikesSteps.i_extract_the_upcoming_bikes_filtered(java.lang.String,java.lang.String)">
+                <span>And I extract the upcoming bikes filtered by manufacturer "Honda" and price ceiling "4.0" Lakh</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.BikesSteps.every_returned_bike_should_match_filter(java.lang.String)">
+                <span>Then every returned bike should be a Honda model priced under "4.0" Lakh</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.BikesSteps.each_bike_should_have_required_fields()">
+                <span>And each bike should have a name, a price and an expected launch date</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.BikesSteps.i_display_the_extracted_bikes_list()">
+                <span>And I display the extracted bikes list</span>
+      <div>Upcoming Honda bikes under 4 Lakh (3 found): - Name: Honda XR 300L | Price: Rs. 1.80 Lakh | Expected Launch: Dec 2026 - Name: Honda XR 300 Rally | Price: Rs. 2.00 Lakh | Expected Launch: Dec 2026 - Name: Honda CRF300L | Price: Rs. 1.80 Lakh | Expected Launch: Dec 2026
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_navigate_back_to_the_home_page()">
+                <span>And I navigate back to the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_should_be_back_on_the_zigwheels_home_page()">
+                <span>Then I should be back on the zigwheels home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Final state
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/embedded3.png' src="screenshots/embedded3.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Popular used car models in Chennai</p>
+            <p class="text-sm">
+              <span>14:26:53</span> / <span>00:01:10:206</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Popular used car models in Chennai</h5>
+<span class='badge badge-success'>09.28.2026 14:26:53</span>
+<span class='badge badge-danger'>09.28.2026 14:28:03</span>
+<span class='badge badge-default'>00:01:10:206</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a used-car buyer researching the Chennai market
+I want to see the popular used car models listed on zigwheels
+So that I know what's commonly available before I search further</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="30"><span class="badge log pass-bg mr-2">Pass</span>Extract all popular used car models for Chennai into a list</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_am_on_the_zigwheels_home_page()">
+                <span>Given I am on the zigwheels home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UsedCarsSteps.i_navigate_to_the_used_cars_page_for(java.lang.String)">
+                <span>When I navigate to the used cars page for "Chennai"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.PerformanceSteps.i_capture_the_page_load_performance_metrics(java.lang.String)">
+                <span>And I capture the page load performance metrics for the "Used cars Chennai" page</span>
+      <div>Page load performance: Used cars Chennai (https://www.zigwheels.com/used-car/Chennai)
+  Server response time: 743 ms  (within 1000 ms budget)
+  Page usable (DOM ready): 3081 ms
+  Fully loaded: 24806 ms
+  Saved to target/performance/page-load-timings.csv
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UsedCarsSteps.i_extract_all_the_popular_models_into_a_list()">
+                <span>Then I extract all the popular models into a list</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UsedCarsSteps.the_popular_models_list_should_not_be_empty()">
+                <span>And the popular models list should not be empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UsedCarsSteps.i_display_the_popular_models_list()">
+                <span>And I display the popular models list</span>
+      <div>Popular used car models in Chennai (8, from the 'Popular Models' filter):
+  - Maruti Suzuki Maruti 800
+  - Maruti Suzuki Maruti Swift
+  - Hyundai I10
+  - Hyundai Santro Xing
+  - Honda City
+  - Toyota Innova
+  - Toyota Fortuner
+  - Mahindra XUV500
+Top 10 Used Cars In Chennai (bonus data point):
+  - Hyundai i20 (58 listings)
+  - Honda City (48 listings)
+  - Hyundai Grand i10 (41 listings)
+  - Honda Amaze (40 listings)
+  - Hyundai Creta (35 listings)
+  - Renault KWID (34 listings)
+  - Kia Seltos (32 listings)
+  - Maruti Suzuki Swift (31 listings)
+  - Tata Nexon (30 listings)
+  - Maruti Suzuki Baleno (26 listings)
+
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_navigate_back_to_the_home_page()">
+                <span>And I navigate back to the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_should_be_back_on_the_zigwheels_home_page()">
+                <span>Then I should be back on the zigwheels home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Final state
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/embedded4.png' src="screenshots/embedded4.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="35"><span class="badge log pass-bg mr-2">Pass</span>Basic accessibility checks on the used cars Chennai page</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_am_on_the_zigwheels_home_page()">
+                <span>Given I am on the zigwheels home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.UsedCarsSteps.i_navigate_to_the_used_cars_page_for(java.lang.String)">
+                <span>When I navigate to the used cars page for "Chennai"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.AccessibilitySteps.i_scan_the_page_and_report_accessibility_violations()">
+                <span>Then I scan the page with axe-core and report any critical or serious accessibility violations</span>
+      <div>axe-core scan of https://www.zigwheels.com/used-car/Chennai
+Violation types found: 7 (critical/serious: 6)
+  [serious] aria-command-name - 2 element(s)
+  [serious] color-contrast - 152 element(s)
+  [serious] frame-title - 1 element(s)
+  [serious] html-has-lang - 1 element(s)
+  [serious] link-name - 5 element(s)
+  [moderate] region - 167 element(s)
+  [critical] select-name - 3 element(s)
+
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.AccessibilitySteps.a_keyboard_only_user_can_tab_through_the_page()">
+                <span>And a keyboard-only user can Tab through the first interactive elements on the page</span>
+      <div>Keyboard Tab journey (15 presses):
+  Tab 1: [a] (no accessible name)
+  Tab 2: [input] "Creta, Community, On Road Price, Ola S1, TVS Bikes"  [no visible focus indicator]
+  Tab 3: [span] role=button (no accessible name)
+  Tab 4: [iframe] "Advertisement"  [no visible focus indicator]
+  Tab 5: [iframe] "Advertisement"  [no visible focus indicator]
+  Tab 6: [a] "Reset All"
+  Tab 7: [input] "Chennai"  [no visible focus indicator]
+  Tab 8: [select] "Min Price 1 Lakh 2 Lakh 3 Lakh 4 Lakh 5 Lakh 6 Lakh 7 Lakh 8"  [no visible focus indicator]
+  Tab 9: [select] "Max Price 1 Lakh 2 Lakh 3 Lakh 4 Lakh 5 Lakh 6 Lakh 7 Lakh 8"  [no visible focus indicator]
+  Tab 10: [input] "0-200000"  [no visible focus indicator]
+  Tab 11: [input] "Search Brand"  [no visible focus indicator]
+  Tab 12: [input] "22_317"  [no visible focus indicator]
+  Tab 13: [input] "22_338"  [no visible focus indicator]
+  Tab 14: [input] "10_146"  [no visible focus indicator]
+  Tab 15: [input] "10_156"  [no visible focus indicator]
+Different visible controls reached: 14
+Findings: 0 non-interactive stop(s), 0 hidden stop(s), 12 stop(s) with no visible focus indicator, 2 control(s) with no accessible name (a screen reader has nothing to announce), 0 press(es) where focus did not move
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Final state
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/embedded5.png' src="screenshots/embedded5.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="52"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Frame handling on the zigwheels home page</p>
+            <p class="text-sm">
+              <span>14:27:46</span> / <span>00:00:22:767</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Frame handling on the zigwheels home page</h5>
+<span class='badge badge-success'>09.28.2026 14:27:46</span>
+<span class='badge badge-danger'>09.28.2026 14:28:09</span>
+<span class='badge badge-default'>00:00:22:767</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=52</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a QA engineer covering the "windows & frames" automation scope item
+I want to switch into one of zigwheels' own iframes and back
+So that frame handling is proven against the real site</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="53"><span class="badge log pass-bg mr-2">Pass</span>Switch into a real iframe on the zigwheels home page and back</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.NavigationSteps.i_am_on_the_zigwheels_home_page()">
+                <span>Given I am on the zigwheels home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.WindowsFramesSteps.i_extract_the_iframes_on_the_page_into_a_list()">
+                <span>When I extract the iframes on the page into a list</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.WindowsFramesSteps.the_iframe_list_should_not_be_empty()">
+                <span>Then the iframe list should not be empty</span>
+      <div>iframes found on the zigwheels home page: 14
+  - id=(none) | name=(none) | src=(none)
+  - id=(none) | name=(none) | src=(none)
+  - id=(none) | name=(none) | src=(none)
+  - id=(none) | name=(none) | src=(none)
+  - id=(none) | name=(none) | src=(none)
+  - id=(none) | name=(none) | src=(none)
+  - id=(none) | name=googlefcPresent | src=(none)
+  - id=1b93daa0a406398 | name=__pb_locator__ | src=about:blank
+  - id=(none) | name=__tcfapiLocator | src=about:blank
+  - id=(none) | name=googlefcInactive | src=about:blank
+  - id=(none) | name=googlefcLoaded | src=about:blank
+  - id=(none) | name=(none) | src=https://gum.criteo.com/syncframe?origin=publishertagids&topU...
+  - id=lt_3p_13021 | name=(none) | src=https://tags.crwdcntrl.net/lt/shared/2/lt.iframe.html?c=1302...
+  - id=goog_plcm_frame | name=(none) | src=https://cm.g.doubleclick.net/partnerpixels?gdpr_consent=CQrQ...
+
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.WindowsFramesSteps.i_switch_into_the_first_iframe_on_the_page()">
+                <span>When I switch into the first iframe on the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.WindowsFramesSteps.the_driver_should_be_inside_the_frame()">
+                <span>Then the driver should be inside the frame</span>
+      <div>Switched into iframe: id=(none) | name=(none) | src=(none)
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.WindowsFramesSteps.i_switch_back_to_the_main_page_content()">
+                <span>And I switch back to the main page content</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.WindowsFramesSteps.the_driver_should_be_back_on_the_main_page()">
+                <span>Then the driver should be back on the main page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Final state
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots/embedded6.png' src="screenshots/embedded6.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">9</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@negative-test</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@negative-test</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Log in to zigwheels with Google using invalid details and capture the error</a>
+<div class="">
+<span class="badge badge-default">Invalid Google login from zigwheels.Log in to zigwheels with Google using invalid details and capture the error</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@smoke</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@smoke</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Log in to zigwheels with Google using invalid details and capture the error</a>
+<div class="">
+<span class="badge badge-default">Invalid Google login from zigwheels.Log in to zigwheels with Google using invalid details and capture the error</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='5'>Display upcoming Honda bikes priced under 4 Lakh</a>
+<div class="">
+<span class="badge badge-default">Upcoming Honda bikes under budget.Display upcoming Honda bikes priced under 4 Lakh</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:26:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='29' id='30'>Extract all popular used car models for Chennai into a list</a>
+<div class="">
+<span class="badge badge-default">Popular used car models in Chennai.Extract all popular used car models for Chennai into a list</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:27:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='52' id='53'>Switch into a real iframe on the zigwheels home page and back</a>
+<div class="">
+<span class="badge badge-default">Frame handling on the zigwheels home page.Switch into a real iframe on the zigwheels home page and back</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@frames</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@frames</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:27:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='52' id='53'>Switch into a real iframe on the zigwheels home page and back</a>
+<div class="">
+<span class="badge badge-default">Frame handling on the zigwheels home page.Switch into a real iframe on the zigwheels home page and back</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@accessibility</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@accessibility</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='4'>Basic accessibility checks on the upcoming bikes page</a>
+<div class="">
+<span class="badge badge-default">Upcoming Honda bikes under budget.Basic accessibility checks on the upcoming bikes page</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:27:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='29' id='35'>Basic accessibility checks on the used cars Chennai page</a>
+<div class="">
+<span class="badge badge-default">Popular used car models in Chennai.Basic accessibility checks on the used cars Chennai page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@performance</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@performance</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='5'>Display upcoming Honda bikes priced under 4 Lakh</a>
+<div class="">
+<span class="badge badge-default">Upcoming Honda bikes under budget.Display upcoming Honda bikes priced under 4 Lakh</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:26:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='29' id='30'>Extract all popular used car models for Chennai into a list</a>
+<div class="">
+<span class="badge badge-default">Popular used car models in Chennai.Extract all popular used car models for Chennai into a list</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@googlelogin</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@googlelogin</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Log in to zigwheels with Google using invalid details and capture the error</a>
+<div class="">
+<span class="badge badge-default">Invalid Google login from zigwheels.Log in to zigwheels with Google using invalid details and capture the error</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@windows</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@windows</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Log in to zigwheels with Google using invalid details and capture the error</a>
+<div class="">
+<span class="badge badge-default">Invalid Google login from zigwheels.Log in to zigwheels with Google using invalid details and capture the error</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@usedcars</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@usedcars</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:26:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='29' id='30'>Extract all popular used car models for Chennai into a list</a>
+<div class="">
+<span class="badge badge-default">Popular used car models in Chennai.Extract all popular used car models for Chennai into a list</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:27:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='29' id='35'>Basic accessibility checks on the used cars Chennai page</a>
+<div class="">
+<span class="badge badge-default">Popular used car models in Chennai.Basic accessibility checks on the used cars Chennai page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@bikes</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@bikes</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='4'>Basic accessibility checks on the upcoming bikes page</a>
+<div class="">
+<span class="badge badge-default">Upcoming Honda bikes under budget.Basic accessibility checks on the upcoming bikes page</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:25:32 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='5'>Display upcoming Honda bikes priced under 4 Lakh</a>
+<div class="">
+<span class="badge badge-default">Upcoming Honda bikes under budget.Display upcoming Honda bikes priced under 4 Lakh</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:27:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='29' id='35'>Basic accessibility checks on the used cars Chennai page</a>
+<div class="">
+<span class="badge badge-default">Popular used car models in Chennai.Basic accessibility checks on the used cars Chennai page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
